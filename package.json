@@ -1,0 +1,17 @@
+{
+    "name": "svarog-test",
+    "version": "0.0.1",
+    "description": "This is an example project that uses the svarog-runner package",
+    "author": "Nikola CBS",
+    "license": "MIT",
+    "scripts": {
+        "setName": "ts-node src/setName.ts",
+        "clearName": "ts-node src/clearName.ts"
+    },
+    "dependencies": {
+        "@polkadot/api": "^10.11.1",
+        "svarog-runner": "^0.0.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.2"
+    }
+}

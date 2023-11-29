@@ -1,0 +1,12 @@
+# Compiled output
+node_modules/
+data/
+
+# Logs
+yarn-error.log*
+
+# Development 
+.env
+
+# Logs
+yarn-error.log*
