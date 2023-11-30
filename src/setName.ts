@@ -13,32 +13,9 @@ const main = async () => {
     const nick = "AliceTestName";
 
     const extrinsic = api.tx.nicks.setName(nick);
+    await extrinsic.signAndSend(signer);
 
-    const tx = new Promise<boolean>(async (resolve) => {
-        const unsub = await extrinsic
-            .signAndSend(signer, (result) => {
-                if (result.status.isFinalized) {
-                    if (unsub) {
-                        unsub();
-                    }
-
-                    const failedEvents = result.events.filter(({ event }) =>
-                        api.events?.system?.ExtrinsicFailed?.is(event)
-                    );
-
-                    resolve(failedEvents.length === 0);
-                }
-            })
-            .catch(() => {
-                resolve(false);
-            });
-    });
-
-    const txStatus = await tx;
-
-    if (txStatus) {
-        console.log(`Nickname for ${signer.address} has been set to ${nick}`);
-    }
+    console.log(`Nickname for ${signer.address} has been set to ${nick}`);
 };
 
 main()
