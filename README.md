@@ -2,11 +2,11 @@
 
 # Intro
 
-This is an example project leveraging the svarog-runner package, illustrating how developers can test the functionalities of a Substrate-based node on a local system
+This is an example project which utilizes the svarog-runner package in order to demonstrate how developers can test the functionalities of a Substrate-based node on a local system.
 
 # Installation
 
-Initial installation of the necessary packages can be accomplished by executing the following command:
+In order to install the necessary packages execute the following command:
 
 ```bash
 yarn install
@@ -16,12 +16,12 @@ yarn install
 
 ## Important Note
 
-In this example, the pre-built Substrate Frame node template was used. **However, we recommend building the desired node on your own machine, as otherwise, there is a chance that the runner may not function properly.** If you build your own node, place it in the **/runners** folder and run it with appropriate command. Frame node for this example is built on Ubuntu 22.04.3 LTS.
+In this example, the pre-built Substrate Frame node template was used. **However, we recommend building the desired node on your own machine, as otherwise, there is a chance that the runner may not function properly.** If you build your own node, place it in the **/runners** folder and run it with appropriate command. The Frame node for this example was built on Ubuntu 22.04.3 LTS.
 
 
 ## Running the network
 
-In this example, launching an instance of the default Substrate node can be achieved with the following command (change name of binary if you built your own node):
+Launching an instance of the default Substrate node can be achieved with the following command **(Note: change name of binary if you built your own node)**:
 
 ```bash
 npx svarog-runner frame
